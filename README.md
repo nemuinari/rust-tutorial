@@ -1,0 +1,57 @@
+# Rust Tutorial
+
+## セットアップ
+
+### 1. Rust のインストール
+
+```bash
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+```
+
+### 2. インストール確認
+
+```bash
+rustc --version
+cargo --version
+```
+
+## プロジェクト作成
+
+### 新規プロジェクト作成
+
+```bash
+cargo init my_project
+cd my_project
+```
+
+### ビルド
+
+```bash
+cargo build
+```
+
+### 実行
+
+```bash
+cargo run
+```
+
+### リリースビルド（最適化）
+
+```bash
+cargo build --release
+cargo run --release
+```
+
+## 実行方法
+
+このプロジェクトでは、簡単に実行できるスクリプトを用意しています：
+
+```bash
+./run.sh
+```
+
+## 参考
+
+- [公式ドキュメント](https://www.rust-lang.org/ja/)
+- [Rust Book](https://doc.rust-lang.org/book/)
