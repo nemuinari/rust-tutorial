@@ -1,10 +1,19 @@
 fn main() {
-    println!("Hello, Rust!");
+    let s = "hello"; 
 
-    let mut a: i32 = 10;
-    let a_mut_ref: &mut i32 = &mut a;
+    let slice = &s[0..2];
+    println!("Slice: {}", slice);
 
-    *a_mut_ref = 20;
-    println!("{}", a_mut_ref);
+    let slice = &s[0..=2];
+    println!("Slice: {}", slice);
+
+    let slice = &s[..2];
+    println!("Slice: {}", slice);
+
+    let slice = &s[2..];
+    println!("Slice: {}", slice);
+
+    let slice = &s; 
+    println!("Slice: {}", slice);
 }
-// #01 ~基本
+// #04 ~データ型
