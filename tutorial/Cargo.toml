@@ -1,10 +1,6 @@
 [package]
-name = "rust-tutorial"
+name = "tutorial"
 version = "0.1.0"
 edition = "2024"
 
 [dependencies]
-
-[[bin]]
-name = "rust-tutorial"
-path = "main.rs"
