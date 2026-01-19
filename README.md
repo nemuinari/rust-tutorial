@@ -36,19 +36,11 @@ cargo build
 cargo run
 ```
 
-### リリースビルド（最適化）
+### リリースビルド
 
 ```bash
 cargo build --release
 cargo run --release
-```
-
-## 実行方法
-
-このプロジェクトでは、簡単に実行できるスクリプトを用意しています：
-
-```bash
-./run.sh
 ```
 
 ## 参考
