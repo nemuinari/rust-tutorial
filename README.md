@@ -2,13 +2,13 @@
 
 ## セットアップ
 
-### 1. Rust のインストール
+#### Rust のインストール
 
 ```bash
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 
-### 2. インストール確認
+#### インストール確認
 
 ```bash
 rustc --version
@@ -17,26 +17,26 @@ cargo --version
 
 ## プロジェクト作成
 
-### 新規プロジェクト作成
+#### 新規プロジェクト作成
 
 ```bash
 cargo init my_project
 cd my_project
 ```
 
-### ビルド
+#### ビルド
 
 ```bash
 cargo build
 ```
 
-### 実行
+#### 実行
 
 ```bash
 cargo run
 ```
 
-### リリースビルド
+#### リリースビルド
 
 ```bash
 cargo build --release
