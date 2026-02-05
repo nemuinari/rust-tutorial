@@ -1,88 +1,12 @@
-   0.023781442s  INFO prepare_target{force=false package_id=hello_cargo v0.1.0 (/home/yuki/projects/rust-tutorial/study/hello_cargo) target="hello_cargo"}: cargo::core::compiler::fingerprint: fingerprint error for hello_cargo v0.1.0 (/home/yuki/projects/rust-tutorial/study/hello_cargo)/Check { test: false }/TargetInner { name: "hello_cargo", doc: true, ..: with_path("/home/yuki/projects/rust-tutorial/study/hello_cargo/src/main.rs", Edition2024) }
-   0.023835093s  INFO prepare_target{force=false package_id=hello_cargo v0.1.0 (/home/yuki/projects/rust-tutorial/study/hello_cargo) target="hello_cargo"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/yuki/projects/rust-tutorial/study/hello_cargo/target/debug/.fingerprint/hello_cargo-08287676c9e5353c/bin-hello_cargo`
-
-Caused by:
-    No such file or directory (os error 2)
-
-Stack backtrace:
-   0: cargo_util::paths::read_bytes
-   1: cargo_util::paths::read
-   2: cargo::core::compiler::fingerprint::_compare_old_fingerprint
-   3: cargo::core::compiler::fingerprint::prepare_target
-   4: cargo::core::compiler::compile
-   5: <cargo::core::compiler::build_runner::BuildRunner>::compile
-   6: cargo::ops::cargo_compile::compile_ws
-   7: cargo::ops::cargo_compile::compile_with_exec
-   8: cargo::ops::cargo_compile::compile
-   9: cargo::commands::check::exec
-  10: <cargo::cli::Exec>::exec
-  11: cargo::main
-  12: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
-  13: std::rt::lang_start::<()>::{closure#0}
-  14: core::ops::function::impls::<impl core::ops::function::FnOnce<A> for &F>::call_once
-             at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library/core/src/ops/function.rs:287:21
-  15: std::panicking::catch_unwind::do_call
-             at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library/std/src/panicking.rs:590:40
-  16: std::panicking::catch_unwind
-             at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library/std/src/panicking.rs:553:19
-  17: std::panic::catch_unwind
-             at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library/std/src/panic.rs:359:14
-  18: std::rt::lang_start_internal::{{closure}}
-             at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library/std/src/rt.rs:175:24
-  19: std::panicking::catch_unwind::do_call
-             at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library/std/src/panicking.rs:590:40
-  20: std::panicking::catch_unwind
-             at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library/std/src/panicking.rs:553:19
-  21: std::panic::catch_unwind
-             at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library/std/src/panic.rs:359:14
-  22: std::rt::lang_start_internal
-             at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library/std/src/rt.rs:171:5
-  23: main
-  24: <unknown>
-  25: __libc_start_main
-  26: <unknown>
-   0.036503103s  INFO prepare_target{force=false package_id=hello_cargo v0.1.0 (/home/yuki/projects/rust-tutorial/study/hello_cargo) target="hello_cargo"}: cargo::core::compiler::fingerprint: fingerprint error for hello_cargo v0.1.0 (/home/yuki/projects/rust-tutorial/study/hello_cargo)/Check { test: true }/TargetInner { name: "hello_cargo", doc: true, ..: with_path("/home/yuki/projects/rust-tutorial/study/hello_cargo/src/main.rs", Edition2024) }
-   0.036520775s  INFO prepare_target{force=false package_id=hello_cargo v0.1.0 (/home/yuki/projects/rust-tutorial/study/hello_cargo) target="hello_cargo"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/yuki/projects/rust-tutorial/study/hello_cargo/target/debug/.fingerprint/hello_cargo-615e591c0793284a/test-bin-hello_cargo`
-
-Caused by:
-    No such file or directory (os error 2)
-
-Stack backtrace:
-   0: cargo_util::paths::read_bytes
-   1: cargo_util::paths::read
-   2: cargo::core::compiler::fingerprint::_compare_old_fingerprint
-   3: cargo::core::compiler::fingerprint::prepare_target
-   4: cargo::core::compiler::compile
-   5: <cargo::core::compiler::build_runner::BuildRunner>::compile
-   6: cargo::ops::cargo_compile::compile_ws
-   7: cargo::ops::cargo_compile::compile_with_exec
-   8: cargo::ops::cargo_compile::compile
-   9: cargo::commands::check::exec
-  10: <cargo::cli::Exec>::exec
-  11: cargo::main
-  12: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
-  13: std::rt::lang_start::<()>::{closure#0}
-  14: core::ops::function::impls::<impl core::ops::function::FnOnce<A> for &F>::call_once
-             at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library/core/src/ops/function.rs:287:21
-  15: std::panicking::catch_unwind::do_call
-             at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library/std/src/panicking.rs:590:40
-  16: std::panicking::catch_unwind
-             at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library/std/src/panicking.rs:553:19
-  17: std::panic::catch_unwind
-             at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library/std/src/panic.rs:359:14
-  18: std::rt::lang_start_internal::{{closure}}
-             at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library/std/src/rt.rs:175:24
-  19: std::panicking::catch_unwind::do_call
-             at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library/std/src/panicking.rs:590:40
-  20: std::panicking::catch_unwind
-             at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library/std/src/panicking.rs:553:19
-  21: std::panic::catch_unwind
-             at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library/std/src/panic.rs:359:14
-  22: std::rt::lang_start_internal
-             at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library/std/src/rt.rs:171:5
-  23: main
-  24: <unknown>
-  25: __libc_start_main
-  26: <unknown>
-    Checking hello_cargo v0.1.0 (/home/yuki/projects/rust-tutorial/study/hello_cargo)
-    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.16s
+   0.043292600s  INFO prepare_target{force=false package_id=hello_cargo v0.1.0 (C:\Users\Admin\.projects\rust-tutorial\study\hello_cargo) target="hello_cargo"}: cargo::core::compiler::fingerprint: stale: changed "C:\\Users\\Admin\\.projects\\rust-tutorial\\study\\hello_cargo\\src\\main.rs"
+   0.043308700s  INFO prepare_target{force=false package_id=hello_cargo v0.1.0 (C:\Users\Admin\.projects\rust-tutorial\study\hello_cargo) target="hello_cargo"}: cargo::core::compiler::fingerprint:           (vs) "C:\\Users\\Admin\\.projects\\rust-tutorial\\study\\hello_cargo\\target\\debug\\.fingerprint\\hello_cargo-00cca059a50473d8\\dep-bin-hello_cargo"
+   0.043313500s  INFO prepare_target{force=false package_id=hello_cargo v0.1.0 (C:\Users\Admin\.projects\rust-tutorial\study\hello_cargo) target="hello_cargo"}: cargo::core::compiler::fingerprint:                FileTime { seconds: 13414751856, nanos: 616855200 } < FileTime { seconds: 13414751860, nanos: 868787200 }
+   0.043422900s  INFO prepare_target{force=false package_id=hello_cargo v0.1.0 (C:\Users\Admin\.projects\rust-tutorial\study\hello_cargo) target="hello_cargo"}: cargo::core::compiler::fingerprint: fingerprint dirty for hello_cargo v0.1.0 (C:\Users\Admin\.projects\rust-tutorial\study\hello_cargo)/Check { test: false }/TargetInner { name: "hello_cargo", doc: true, ..: with_path("C:\\Users\\Admin\\.projects\\rust-tutorial\\study\\hello_cargo\\src\\main.rs", Edition2024) }
+   0.043435800s  INFO prepare_target{force=false package_id=hello_cargo v0.1.0 (C:\Users\Admin\.projects\rust-tutorial\study\hello_cargo) target="hello_cargo"}: cargo::core::compiler::fingerprint:     dirty: FsStatusOutdated(StaleItem(ChangedFile { reference: "C:\\Users\\Admin\\.projects\\rust-tutorial\\study\\hello_cargo\\target\\debug\\.fingerprint\\hello_cargo-00cca059a50473d8\\dep-bin-hello_cargo", reference_mtime: FileTime { seconds: 13414751856, nanos: 616855200 }, stale: "C:\\Users\\Admin\\.projects\\rust-tutorial\\study\\hello_cargo\\src\\main.rs", stale_mtime: FileTime { seconds: 13414751860, nanos: 868787200 } }))
+   0.043971300s  INFO prepare_target{force=false package_id=hello_cargo v0.1.0 (C:\Users\Admin\.projects\rust-tutorial\study\hello_cargo) target="hello_cargo"}: cargo::core::compiler::fingerprint: stale: changed "C:\\Users\\Admin\\.projects\\rust-tutorial\\study\\hello_cargo\\src\\main.rs"
+   0.043981100s  INFO prepare_target{force=false package_id=hello_cargo v0.1.0 (C:\Users\Admin\.projects\rust-tutorial\study\hello_cargo) target="hello_cargo"}: cargo::core::compiler::fingerprint:           (vs) "C:\\Users\\Admin\\.projects\\rust-tutorial\\study\\hello_cargo\\target\\debug\\.fingerprint\\hello_cargo-287d06f6442a3ad5\\dep-test-bin-hello_cargo"
+   0.043985200s  INFO prepare_target{force=false package_id=hello_cargo v0.1.0 (C:\Users\Admin\.projects\rust-tutorial\study\hello_cargo) target="hello_cargo"}: cargo::core::compiler::fingerprint:                FileTime { seconds: 13414751856, nanos: 617855000 } < FileTime { seconds: 13414751860, nanos: 868787200 }
+   0.044103100s  INFO prepare_target{force=false package_id=hello_cargo v0.1.0 (C:\Users\Admin\.projects\rust-tutorial\study\hello_cargo) target="hello_cargo"}: cargo::core::compiler::fingerprint: fingerprint dirty for hello_cargo v0.1.0 (C:\Users\Admin\.projects\rust-tutorial\study\hello_cargo)/Check { test: true }/TargetInner { name: "hello_cargo", doc: true, ..: with_path("C:\\Users\\Admin\\.projects\\rust-tutorial\\study\\hello_cargo\\src\\main.rs", Edition2024) }
+   0.044114300s  INFO prepare_target{force=false package_id=hello_cargo v0.1.0 (C:\Users\Admin\.projects\rust-tutorial\study\hello_cargo) target="hello_cargo"}: cargo::core::compiler::fingerprint:     dirty: FsStatusOutdated(StaleItem(ChangedFile { reference: "C:\\Users\\Admin\\.projects\\rust-tutorial\\study\\hello_cargo\\target\\debug\\.fingerprint\\hello_cargo-287d06f6442a3ad5\\dep-test-bin-hello_cargo", reference_mtime: FileTime { seconds: 13414751856, nanos: 617855000 }, stale: "C:\\Users\\Admin\\.projects\\rust-tutorial\\study\\hello_cargo\\src\\main.rs", stale_mtime: FileTime { seconds: 13414751860, nanos: 868787200 } }))
+    Checking hello_cargo v0.1.0 (C:\Users\Admin\.projects\rust-tutorial\study\hello_cargo)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.08s
