@@ -1,1 +1,1 @@
-/home/yuki/projects/rust-tutorial/tutorial/target/debug/tutorial: /home/yuki/projects/rust-tutorial/tutorial/src/main.rs
+C:\Users\Admin\.projects\rust-tutorial\tutorial\target\debug\tutorial.exe: C:\Users\Admin\.projects\rust-tutorial\tutorial\src\main.rs
