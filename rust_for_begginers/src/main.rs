@@ -1,6 +1,5 @@
+mod p03_02;
+
 fn main() {
-    let mut x: i32 = 5;
-    println!("The value of x is: {}", x);
-    x = 6;
-    println!("The value of x is: {}", x);
+    p03_02::execute();
 }
