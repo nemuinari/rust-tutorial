@@ -1,1 +1,0 @@
-C:\Users\Admin\.projects\rust-tutorial\rust_for_begginers\target\debug\rust_for_begginers.exe: C:\Users\Admin\.projects\rust-tutorial\rust_for_begginers\src\main.rs C:\Users\Admin\.projects\rust-tutorial\rust_for_begginers\src\p03_02.rs
