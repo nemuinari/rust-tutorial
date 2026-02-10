@@ -1,5 +1,5 @@
-mod p04_01;
+mod p04_02;
 
 fn main() {
-    p04_01::execute();
+    p04_02::execute();
 }
