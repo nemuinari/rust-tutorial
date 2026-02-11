@@ -17,7 +17,7 @@ impl Rectangle {
         self.width * self.height
     }
 
-    fn setWidth(&mut self, width: u32) {
+    fn set_width(&mut self, width: u32) {
         self.width = width;
     }
 }
@@ -28,9 +28,9 @@ pub fn execute() {
         height: 50,
     };
 
-    rect.setWidth(60);
+    rect.set_width(60);
 
-    let mut square: Rectangle = Rectangle::square(40);
+    let square: Rectangle = Rectangle::square(40);
 
     println!(
         "The area of the rectangle is {} square pixels.",
