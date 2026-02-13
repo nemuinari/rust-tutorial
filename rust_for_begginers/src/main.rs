@@ -1,5 +1,8 @@
-mod p06_03;
+pub mod second;
+
+use second::hello;
 
 fn main() {
-    p06_03::execute();
+    println!("Hello, world!");
+    hello();
 }
