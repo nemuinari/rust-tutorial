@@ -1,11 +1,6 @@
-pub mod second;
-pub mod third;
-
-use second::hello;
-use third::third::execute;
+mod p0801;
+use p0801::execute;
 
 fn main() {
-    println!("Hello, main!");
-    hello();
     execute();
 }
