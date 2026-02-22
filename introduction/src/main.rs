@@ -1,5 +1,5 @@
 mod chapter3;
-use chapter3::p08::execute;
+use chapter3::p10::execute;
 
 fn main() {
     execute();
