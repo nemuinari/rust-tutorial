@@ -1,5 +1,7 @@
-// derive macro
+// This is a sample CLI program that reads a file and prints its contents to the console.
 use clap::Parser;
+use std::fs::File;
+use std::io::{BufRead, BufReader};
 
 #[derive(Parser, Debug)]
 #[command(
@@ -19,46 +21,15 @@ struct Opts {
 fn main() {
     let opts = Opts::parse();
 
-    if let Some(file) = opts.formula_file {
-        println!("File specified: {}", file);
+    if let Some(path) = opts.formula_file {
+        let f = File::open(path).unwrap();
+        let reader = BufReader::new(f);
+
+        for line in reader.lines() {
+            let line = line.unwrap();
+            println!("{}", line);
+        }
     } else {
         println!("No file specified");
     }
-
-    println!("Is verbosity specified? {}", opts.verbose);
 }
-
-// build-deps clap
-/*
-use clap::{Arg, ArgAction, Command};
-
-fn main() {
-    let matches = Command::new("My RPN program")
-        .version("1.0.0")
-        .author("N.N.")
-        .about("Super awesome sample RPN calculator")
-        .arg(
-            Arg::new("formula_file")
-                .help("Formulas written in RPN")
-                .value_name("FILE")
-                .index(1)
-                .required(false),
-        )
-        .arg(
-            Arg::new("verbose")
-                .help("Sets the level of verbosity")
-                .short('v')
-                .long("verbose")
-                .action(ArgAction::SetTrue),
-        )
-        .get_matches();
-
-    match matches.get_one::<String>("formula_file") {
-        Some(file) => println!("File specified: {}", file),
-        None => println!("No file specified"),
-    }
-
-    let verbose = matches.get_flag("verbose");
-    println!("Is verbosity specified? {}", verbose);
-}
-*/
