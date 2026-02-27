@@ -17,31 +17,6 @@ struct Opts {
     #[arg(value_name = "FILE")]
     formula_file: Option<String>,
 }
-
-fn main() {
-    let opts = Opts::parse();
-
-    if let Some(path) = opts.formula_file {
-        let f = File::open(path).unwrap();
-        let reader = BufReader::new(f);
-        run(reader, opts.verbose);
-    } else {
-        let stdin = stdin();
-        let reader = stdin.lock();
-        run(reader, opts.verbose);
-    }
-}
-
-fn run<R: BufRead>(reader: R, verbose: bool) {
-    let calc = RpnCalculator::new(verbose);
-
-    for line in reader.lines() {
-        let line = line.unwrap();
-        let answer = calc.eval(&line);
-        println!("{}", answer);
-    }
-}
-
 struct RpnCalculator(bool);
 
 impl RpnCalculator {
@@ -84,5 +59,29 @@ impl RpnCalculator {
         } else {
             panic!("invalid syntax");
         }
+    }
+}
+
+fn run<R: BufRead>(reader: R, verbose: bool) {
+    let calc = RpnCalculator::new(verbose);
+
+    for line in reader.lines() {
+        let line = line.unwrap();
+        let answer = calc.eval(&line);
+        println!("{}", answer);
+    }
+}
+
+fn main() {
+    let opts = Opts::parse();
+
+    if let Some(path) = opts.formula_file {
+        let f = File::open(path).unwrap();
+        let reader = BufReader::new(f);
+        run(reader, opts.verbose);
+    } else {
+        let stdin = stdin();
+        let reader = stdin.lock();
+        run(reader, opts.verbose);
     }
 }
