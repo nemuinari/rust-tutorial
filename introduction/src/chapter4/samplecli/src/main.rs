@@ -44,6 +44,7 @@ impl RpnCalculator {
                     "-" => x - y,
                     "*" => x * y,
                     "/" => x / y,
+                    "%" => x % y,
                     _ => panic!("invalid token"),
                 };
                 stack.push(res);
@@ -83,5 +84,31 @@ fn main() {
         let stdin = stdin();
         let reader = stdin.lock();
         run(reader, opts.verbose);
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_ok() {
+        let calc = RpnCalculator::new(false);
+        assert_eq!(calc.eval("5"), 5);
+        assert_eq!(calc.eval("50"), 50);
+        assert_eq!(calc.eval("-50"), -50);
+
+        assert_eq!(calc.eval("2 3 +"), 5);
+        assert_eq!(calc.eval("2 3 *"), 6);
+        assert_eq!(calc.eval("2 3 -"), -1);
+        assert_eq!(calc.eval("2 3 /"), 0);
+        assert_eq!(calc.eval("2 3 %"), 2);
+    }
+
+    #[test]
+    #[should_panic]
+    fn test_ng() {
+        let calc = RpnCalculator::new(false);
+        calc.eval("1 1 ^");
     }
 }
