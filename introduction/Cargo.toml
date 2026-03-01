@@ -5,3 +5,7 @@ edition = "2024"
 
 [dependencies]
 futures = "0.3"
+
+[[bin]]
+name = "err_panic"
+path = "src/chapter4/bin/err_panic.rs"
