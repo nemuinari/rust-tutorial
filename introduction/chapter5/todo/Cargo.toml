@@ -5,4 +5,5 @@ edition = "2024"
 
 [dependencies]
 actix-web = "4.13.0"
+askama = "0.15.4"
 thiserror = "2.0.18"
