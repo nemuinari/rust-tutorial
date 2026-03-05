@@ -1,0 +1,12 @@
+[package]
+name = "ui_demo"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+iced = { version = "0.10", features = ["async-std"] }
+
+iced_native = "0.10"
+iced_futures = "0.7"
+
+async-std = { version = "1.12", features = ["attributes"] }
